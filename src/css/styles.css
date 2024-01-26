@@ -30,10 +30,6 @@ main {
   color: #FFFFFF;
 }
 
-.section{
-  padding: 70px 0;
-}
-
 .container {
   width: 60%; /* se for uma tela menor que 980px vai se adaptar a 70% */
   max-width: 960px; /* quando chegar em 980px para de aumentar */
@@ -121,31 +117,80 @@ main {
   line-height: 23px;
 }
 
-/* REPOSITORIES */
-
-.container .profile-data .repositories h2{
-  margin-bottom: 30px;
-  text-align: center;
+.container .profile-data .info .numbers {
+  color: hotpink;
+  font-weight: 700;
 }
 
-.container .profile-data .repositories ul{
+.container .profile-data .section h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.container .profile-data .section ul li {
+  margin: 20px;
+}
+
+/* EVENTS */
+
+.container .profile-data .events {
+  padding: 70px 0 35px 0;
+}
+
+.container .profile-data .events a {
+  font-weight: 700;
+  transition: 0.2s ease-in-out;
+}
+
+.container .profile-data .events a:hover {
+  color: hotpink;
+}
+
+.container .profile-data .events span {
+  color: #696969	;
+  line-height: 23px;
+}
+
+/* REPOSITORIES */
+
+.container .profile-data .repositories {
+  padding: 35px 0 70px 0;
+}
+
+.container .profile-data .repositories ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.container .profile-data .repositories ul li a{
-  padding: 20px;
+.container .profile-data .repositories ul li a {
+  padding: 15px 10px;
   border: 1px solid grey;  
-  margin: 20px;
-  display: block;
+  display: flex;
+  flex-direction: column;
   border-radius: 7px;
   transition: 0.3s ease-in-out;
 }
 
-.container .profile-data .repositories ul li a:hover{
+.container .profile-data .repositories ul li a:hover {
   background-color:hotpink;
   color: #fff
+}
+
+.container .profile-data .repositories ul li a div {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container .profile-data .repositories ul li a div span {
+  color: #fff;
+  background-color: #7b2be2;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
 }
 
 .container .profile-data.hide{

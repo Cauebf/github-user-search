@@ -23,11 +23,15 @@
     }
   }
   
-  @media (max-width: 425px) {
+  @media (max-width: 540px) {
     main {
       padding: 15% 0;    
     }
   
+    .container .profile-data {
+      padding: 25px;
+    }
+
     .container .profile-data .info img{
       margin-bottom: 20px;
     }
