@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   font-weight: 300;
+  box-sizing: border-box;
 }
 
 img {
@@ -11,34 +12,40 @@ img {
 }
 
 body {
-  background-color:#24292e;
-  font-family: "Kumbh Sans", sans-serif;  
-  text-align: center;    
+  background-color: #24292e;
+  font-family: "Kumbh Sans", sans-serif;
+  text-align: center;
   padding-bottom: 100px;
+  color: #333;
 }
 
 main {
-  display: flex;  
+  display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 50px 0 0;      
+  padding: 50px 0 0;
 }
 
-.devicon-github-original{
+.devicon-github-original {
   font-size: 60px;
   margin-bottom: 30px;
-  color: #FFFFFF;
+  color: #ffffff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.devicon-github-original:hover {
+  transform: rotate(10deg) scale(1.1);
 }
 
 .container {
-  width: 60%; /* se for uma tela menor que 980px vai se adaptar a 70% */
-  max-width: 960px; /* quando chegar em 980px para de aumentar */
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
+  width: 60%;
+  max-width: 960px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 30px;
+  border-radius: 20px;
   padding: 30px;
   margin: 0 auto;
 }
@@ -63,56 +70,69 @@ main {
   padding: 10px;
   border-radius: 7px;
   border: 1px solid grey;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease-in-out;
+}
+
+.container header #input-search:focus {
+  outline: none;
+  border-color: hotpink;
+  box-shadow: 0 0 5px hotpink;
 }
 
 .container header #btn-search {
   width: 200px;
   font-size: 17px;
   margin: 20px auto 0;
-  padding: 10px;
-  border-radius: 7px;  
+  padding: 12px;
+  border-radius: 7px;
   cursor: pointer;
-  border: 1px solid grey;
+  border: none;
+  background-color: hotpink;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
 }
 
 .container header #btn-search:hover {
-  background-color: hotpink;
-  color: #ffffff;
-  border-color: #ffffff;
+  background-color: #ff69b4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.container .profile-data{
+.container .profile-data {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;  
+  padding: 40px;
 }
 
 .container .profile-data .info {
-  display: flex;  
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-.container .profile-data .info .data{
+.container .profile-data .info .data {
   padding: 40px;
   width: 50%;
 }
 
-.container .profile-data .info img{
+.container .profile-data .info img {
   width: 50%;
   border-radius: 50%;
   border: 10px solid hotpink;
 }
 
-.container .profile-data .info h1{
+.container .profile-data .info h1 {
   font-size: 20px;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
-.container .profile-data .info p{
-  font-size: 15px;  
+.container .profile-data .info p {
+  font-size: 15px;
   font-weight: 400;
   line-height: 23px;
 }
@@ -141,6 +161,8 @@ main {
 .container .profile-data .events a {
   font-weight: 700;
   transition: 0.2s ease-in-out;
+  text-decoration: none;
+  color: #333;
 }
 
 .container .profile-data .events a:hover {
@@ -148,7 +170,9 @@ main {
 }
 
 .container .profile-data .events span {
-  color: #696969	;
+  color: #696969;
+  font-style: italic;
+  font-size: 14px;
   line-height: 23px;
 }
 
@@ -164,18 +188,28 @@ main {
   justify-content: center;
 }
 
+.container .profile-data .repositories ul li {
+  margin: 10px;
+}
+
 .container .profile-data .repositories ul li a {
+  background-color: #f7f7f7;
+  color: #333;
   padding: 15px 10px;
-  border: 1px solid grey;  
+  border: 1px solid grey;
   display: flex;
   flex-direction: column;
   border-radius: 7px;
-  transition: 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  min-width: 200px;
 }
 
 .container .profile-data .repositories ul li a:hover {
-  background-color:hotpink;
-  color: #fff
+  background-color: hotpink;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
 .container .profile-data .repositories ul li a div {
@@ -191,8 +225,9 @@ main {
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
+  font-size: 13px;
 }
 
-.container .profile-data.hide{
+.container .profile-data.hide {
   display: none;
 }
