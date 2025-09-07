@@ -81,4 +81,4 @@ For any inquiries or collaboration opportunities, feel free to reach out via:
 [![Instagram](https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/cauebf_/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Cauebf)
 
-<p align="right">(<a href="#socialink-">back to top</a>)</p>
+<p align="right">(<a href="#gitHub-user-search-">back to top</a>)</p>
